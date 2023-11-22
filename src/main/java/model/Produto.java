@@ -1,9 +1,13 @@
 package main.java.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Produto {
     private long id;
-    private String codigo;
+    private int codigo;
     private String descricao;
+    private List<ItemNota> itensNota = new ArrayList<>();
 
     public long getId() {
         return id;
@@ -13,11 +17,11 @@ public class Produto {
         this.id = id;
     }
 
-    public String getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
@@ -29,12 +33,23 @@ public class Produto {
         this.descricao = descricao;
     }
 
+    public List<ItemNota> getItensNota() {
+        return itensNota;
+    }
+
+    public void addItenNota(ItemNota itemNota) {
+        this.itensNota.add(itemNota);
+    }
+
+    public void removerItenNota(ItemNota itemNota) {
+        this.itensNota.remove(itemNota);
+    }
+
     @Override
     public String toString() {
-        return "Produto{" +
-                "id=" + id +
-                ", codigo='" + codigo + '\'' +
-                ", descricao='" + descricao + '\'' +
-                '}';
+        return  "Produto:" +
+                "\nID: " + id +
+                "\nCódigo: " + codigo +
+                "\nDescrição: " + descricao;
     }
 }

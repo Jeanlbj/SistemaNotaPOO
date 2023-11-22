@@ -1,11 +1,16 @@
 package main.java.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Empresa {
     private long id;
     private int codigo;
     private String razaoSocial;
     private String endereco;
     private String cnpj;
+
+    private List<Nota> notas = new ArrayList<>();
 
     public long getId() {
         return id;
@@ -47,15 +52,27 @@ public class Empresa {
         this.cnpj = cnpj;
     }
 
+    public List<Nota> getNotas() {
+        return notas;
+    }
+
+    public void addNota(Nota nota) {
+        this.notas.add(nota);
+    }
+
+    public void removerNota(Nota nota) {
+        this.notas.remove(nota);
+    }
+
     @Override
     public String toString() {
-        return "Empresa{" +
-                "id=" + id +
-                ", codigo=" + codigo +
-                ", razaoSocial='" + razaoSocial + '\'' +
-                ", endereco='" + endereco + '\'' +
-                ", cnpj='" + cnpj + '\'' +
-                '}';
+        return  "Empresa:" +
+                "\nID Empresa: " + id +
+                "\nCódigo: " + codigo +
+                "\nRazão Social: " + razaoSocial +
+                "\nEndereço: " + endereco +
+                "\nCNPJ: " + cnpj;
     }
 }
+
 

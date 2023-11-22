@@ -5,6 +5,9 @@ public class ItemNota {
     private double vrUnitario;
     private double quantidade;
 
+    private Produto produto;
+    private Nota nota;
+
     public long getId() {
         return id;
     }
@@ -29,12 +32,27 @@ public class ItemNota {
         this.quantidade = quantidade;
     }
 
+    public Produto getProduto() {
+        return produto;
+    }
+
+    public void setProduto(Produto produto) {
+        this.produto = produto;
+    }
+
+    public Nota getNota() {
+        return nota;
+    }
+
+    public void setNota(Nota nota) {
+        this.nota = nota;
+    }
+
     @Override
     public String toString() {
-        return "ItemNota{" +
-                "id=" + id +
-                ", vrUnitario=" + vrUnitario +
-                ", quantidade=" + quantidade +
-                '}';
+        return  "Item:" +
+                "\nID: " + id +
+                "\nValor Unitário: " + vrUnitario +
+                "\nQuantidade: " + quantidade;
     }
 }
