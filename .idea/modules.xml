@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NotaPOO.iml" filepath="$PROJECT_DIR$/NotaPOO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SistemaNota.iml" filepath="$PROJECT_DIR$/SistemaNota.iml" />
     </modules>
   </component>
 </project>
