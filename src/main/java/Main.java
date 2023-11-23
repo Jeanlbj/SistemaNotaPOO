@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Instanciação Empresa
+        // Instanciação: Empresa
         Empresa empresa1 = new Empresa();
         empresa1.setId(1);
         empresa1.setCodigo(32);
@@ -17,7 +17,7 @@ public class Main {
         empresa1.setEndereco("Rua Halfed, Centro");
         empresa1.setCnpj("25.101.1231/0001-15");
 
-        // Instanciando Nota
+        // Instanciação: Nota
         Nota nota1 = new Nota();
         nota1.setId(510);
         nota1.setData(new GregorianCalendar(2023, Calendar.APRIL, 25).getTime());
@@ -28,14 +28,14 @@ public class Main {
         nota2.setData(new GregorianCalendar(2023, Calendar.JANUARY, 12).getTime());
         nota2.setNumero(2001);
 
-        // Instanciando Participante
+        // Instanciação: Participante
         Participante participante1 = new Participante();
         participante1.setId(12);
         participante1.setCodigo(1415);
         participante1.setRazaoSocial("Eletônicos do Murilo");
         participante1.setCnpj("25.101.1231/0001-15");
 
-        // Instanciando ItemNota
+        // Instanciação: ItemNota
         ItemNota item1 = new ItemNota();
         item1.setId(91);
         item1.setVrUnitario(100.00);
@@ -46,7 +46,7 @@ public class Main {
         item2.setVrUnitario(50.00);
         item2.setQuantidade(4);
 
-        // Instanciando Produto
+        // Instanciação: Produto
         Produto produto1 = new Produto();
         produto1.setId(41);
         produto1.setCodigo(213);
@@ -89,15 +89,12 @@ public class Main {
         empresa1.addNota(nota1);
         empresa1.addNota(nota2);
 
+        // Imprimindo Objetos
+        System.out.println("=== Sistema de Notas ===");
+
+        System.out.println();
+
         System.out.println(empresa1);
-
-        System.out.println();
-
-        System.out.println(nota1);
-
-        System.out.println();
-
-        System.out.println(nota2);
 
         System.out.println();
 
@@ -105,15 +102,27 @@ public class Main {
 
         System.out.println();
 
-        System.out.println(item1);
-
-        System.out.println(item2);
+        System.out.println(nota1);
 
         System.out.println();
 
-        System.out.println(produto1);
+        nota1.listarItensNota();
 
-        System.out.println(produto2);
+        System.out.println();
+
+        nota1.listarProduto();
+
+        System.out.println();
+
+        System.out.println(nota2);
+
+        System.out.println();
+
+        nota2.listarItensNota();
+
+        System.out.println();
+
+        nota2.listarProduto();
 
     }
 }

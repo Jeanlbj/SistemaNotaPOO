@@ -50,7 +50,7 @@ public class ItemNota {
 
     @Override
     public String toString() {
-        return  "Item:" +
+        return  "Item Nota:" +
                 "\nID: " + id +
                 "\nValor Unitário: " + vrUnitario +
                 "\nQuantidade: " + quantidade;

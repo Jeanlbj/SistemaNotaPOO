@@ -74,10 +74,25 @@ public class Nota {
         return String.format("%.2f", vrTotal);
     }
 
+    public void listarItensNota() {
+        for (ItemNota itemNota : itensNotas) {
+            String item = itemNota.toString();
+            System.out.println(item);
+        }
+    }
+
+    public void listarProduto() {
+        for (ItemNota produto : itensNotas) {
+            String produtos = produto.getProduto().toString();
+            System.out.println(produtos);
+        }
+    }
+
     @Override
     public String toString() {
         return "Nota:" +
                 "\nID: " + id +
+                "\nParticipante: " + participante.getRazaoSocial() +
                 "\nData: " + this.getData() +
                 "\nNúmero: " + numero +
                 "\nVrTotal: " + this.getVrTotal();
